@@ -6,8 +6,8 @@ from fastapi import APIRouter, Depends, Form, Request
 from fastapi.responses import RedirectResponse
 from sqlalchemy.orm import Session
 
-from ..db import get_db
-from ..dependencies import get_current_user, get_templates
+from ..core.db import get_db
+from ..core.dependencies import get_current_user, get_templates
 from ..models import User
 from ..services.recruitment import (
     create_job_post,

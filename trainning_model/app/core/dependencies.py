@@ -5,8 +5,8 @@ from fastapi.templating import Jinja2Templates
 from sqlalchemy.orm import Session
 
 from .db import get_db
-from .models import User
-from .services.users import get_user_by_id
+from ..models import User
+from ..services.users import get_user_by_id
 
 
 def get_current_user(

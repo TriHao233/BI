@@ -3,7 +3,7 @@ from __future__ import annotations
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
-from ..db import get_db
+from ..core.db import get_db
 from ..services.artifacts import get_artifact_error, get_loaded_jobs_count
 from ..services.recruitment import count_job_applications, count_job_posts
 from ..services.users import count_users

@@ -10,6 +10,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.neighbors import NearestNeighbors
 
 BASE_DIR = Path(__file__).resolve().parent
+DATA_DIR = BASE_DIR / "data"
 ARTIFACTS_DIR = BASE_DIR / "artifacts"
 TFIDF_PATH = ARTIFACTS_DIR / "tfidf.pkl"
 KNN_PATH = ARTIFACTS_DIR / "knn_model.pkl"
@@ -22,6 +23,8 @@ REQUIRED_COLUMNS = ["Job_ID", "Job_Name", "Job_Requirements"]
 def resolve_data_path() -> Path:
     # Hỗ trợ cả tên file chuẩn và tên file đang có trong repo.
     candidates = [
+        DATA_DIR / "Job_dataset.csv",
+        DATA_DIR / "Job Datsset.csv",
         BASE_DIR / "Job_dataset.csv",
         BASE_DIR / "Job Datsset.csv",
     ]

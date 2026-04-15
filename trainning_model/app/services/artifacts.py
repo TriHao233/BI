@@ -7,7 +7,7 @@ from typing import Any
 
 import pandas as pd
 
-from ..config import JOBS_INFO_PATH, KNN_PATH, TFIDF_PATH
+from ..core.config import JOBS_INFO_PATH, KNN_PATH, TFIDF_PATH
 
 vectorizer: Any | None = None
 knn_model: Any | None = None

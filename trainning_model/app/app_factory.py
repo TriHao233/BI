@@ -7,9 +7,9 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from starlette.middleware.sessions import SessionMiddleware
 
-from .config import SESSION_SECRET, STATIC_DIR, TEMPLATES_DIR
-from .db import init_database
-from .routers import api, auth, candidate, health, recruiter
+from .controllers import api, auth, candidate, health, recruiter
+from .core.config import SESSION_SECRET, STATIC_DIR, TEMPLATES_DIR
+from .core.db import init_database
 from .services.artifacts import load_artifacts, set_artifact_error
 
 

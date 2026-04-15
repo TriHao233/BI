@@ -4,9 +4,9 @@ from sqlalchemy import func, select
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
-from ..config import DEFAULT_ROLE, VALID_ROLES
+from ..core.config import DEFAULT_ROLE, VALID_ROLES
 from ..models import User
-from ..security import hash_password
+from ..core.security import hash_password
 
 
 def normalize_user_role(role: str) -> str:

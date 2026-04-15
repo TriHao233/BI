@@ -4,11 +4,11 @@ from fastapi import APIRouter, Depends, Form, Request
 from fastapi.responses import RedirectResponse
 from sqlalchemy.orm import Session
 
-from ..config import DEFAULT_ROLE
-from ..db import get_db
-from ..dependencies import get_current_user, get_templates
+from ..core.config import DEFAULT_ROLE
+from ..core.db import get_db
+from ..core.dependencies import get_current_user, get_templates
 from ..models import User
-from ..security import verify_password
+from ..core.security import verify_password
 from ..services.users import (
     apply_default_role_if_empty,
     create_user,
