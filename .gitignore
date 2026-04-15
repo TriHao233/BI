@@ -8,6 +8,7 @@ venv/
 
 # VS Code local settings
 .vscode/
+BI_project/
 
 # Training outputs
 trainning_model/artifacts/
